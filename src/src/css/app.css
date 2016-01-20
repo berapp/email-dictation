@@ -1,0 +1,101 @@
+/* SVG files from IcoMoon Free set */
+
+.gmde_microphone {
+	width: 16px;
+	height: 21px;
+	background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iMTI3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IiM1RTVGNjAiIGQ9Im0zNS43NSw4Ny4wMjc3ODZjMTAuODkyMzM4LDAgMTkuNzIyMjE4LC04LjgyOTg4IDE5LjcyMjIxOCwtMTkuNzIyMjM3bDAsLTQ3LjMzMzMzMmMwLC0xMC44OTIzMyAtOC44Mjk4OCwtMTkuNzIyMjE4IC0xOS43MjIyMTgsLTE5LjcyMjIxOHMtMTkuNzIyMjIzLDguODI5ODg3IC0xOS43MjIyMjMsMTkuNzIyMjE4bDAsNDcuMzMzMzMyYzAsMTAuODkyMzU3IDguODMwMTMyLDE5LjcyMjIzNyAxOS43MjIyMjMsMTkuNzIyMjM3em0yNy42MTExMDcsLTMxLjU1NTU2OWwwLDExLjgzMzMzMmMwLDE1LjI0ODk5MyAtMTIuMzYyMTI1LDI3LjYxMTEyMiAtMjcuNjExMTA3LDI3LjYxMTEyMmMtMTUuMjQ5MjI2LDAgLTI3LjYxMTExMiwtMTIuMzYyMTI5IC0yNy42MTExMTIsLTI3LjYxMTEyMmwwLC0xMS44MzMzMzJsLTcuODg4ODg4LDBsMCwxMS44MzMzMzJjMCwxOC4yNzI0MDggMTMuODA2MDQ4LDMzLjMxODIyMiAzMS41NTU1NTMsMzUuMjgwNTk0bDAsMTUuOTk3MTkybC0xNS43Nzc3NzcsMGwwLDcuODg4ODg1bDM5LjQ0NDQ0MSwwbDAsLTcuODg4ODg1bC0xNS43Nzc3NzUsMGwwLC0xNS45OTcxOTJjMTcuNzQ5MjY0LC0xLjk2MjM3MiAzMS41NTU1NTcsLTE3LjAwODE4NiAzMS41NTU1NTcsLTM1LjI4MDU5NGwwLC0xMS44MzMzMzJsLTcuODg4ODkzLDB6Ii8+PC9zdmc+');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    -webkit-filter: none;
+}
+
+.gmde_microphone.active {
+	-webkit-filter: hue-rotate(190deg) saturate(200);
+}
+
+.gmde_microphone.processing {
+	-webkit-filter: hue-rotate(50deg) saturate(200);
+}
+
+.gmde_microphone_parent {
+	min-width: 0 !important;
+	margin-right: 0 !important;
+	margin-left: 8px !important;
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+	border: 1px solid transparent !important;
+	box-shadow: none !important;
+	cursor: pointer !important;
+}
+
+.gmde_microphone_parent:hover {
+	border: 1px solid #c6c6c6 !important;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1) !important;
+}
+
+.gmde_cog {
+	width: 16px;
+	height: 21px;
+	background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSIjNUU1RjYwIiBkPSJNMTQuNTkgOS41MzVjLTAuODM5LTEuNDU0LTAuMzM1LTMuMzE3IDEuMTI3LTQuMTY0bC0xLjU3Mi0yLjcyM2MtMC40NDkgMC4yNjMtMC45NzIgMC40MTQtMS41MjkgMC40MTQtMS42OCAwLTMuMDQyLTEuMzcxLTMuMDQyLTMuMDYyaC0zLjE0NWMwLjAwNCAwLjUyMi0wLjEyNiAxLjA1MS0wLjQwNiAxLjUzNS0wLjgzOSAxLjQ1NC0yLjcwNiAxLjk0OC00LjE3IDEuMTA2bC0xLjU3MiAyLjcyM2MwLjQ1MyAwLjI1NyAwLjg0NSAwLjYzNCAxLjEyMyAxLjExNyAwLjgzOCAxLjQ1MiAwLjMzNiAzLjMxMS0xLjEyIDQuMTZsMS41NzIgMi43MjNjMC40NDgtMC4yNjEgMC45NjctMC40MSAxLjUyMi0wLjQxIDEuNjc1IDAgMy4wMzMgMS4zNjIgMy4wNDIgMy4wNDZoMy4xNDVjLTAuMDAxLTAuNTE3IDAuMTI5LTEuMDQwIDAuNDA2LTEuNTE5IDAuODM4LTEuNDUyIDIuNy0xLjk0NyA0LjE2My0xLjExbDEuNTcyLTIuNzIzYy0wLjQ1LTAuMjU3LTAuODM5LTAuNjMzLTEuMTE2LTEuMTEzek04IDExLjI0Yy0xLjc4OSAwLTMuMjQtMS40NS0zLjI0LTMuMjRzMS40NS0zLjI0IDMuMjQtMy4yNGMxLjc4OSAwIDMuMjQgMS40NSAzLjI0IDMuMjRzLTEuNDUgMy4yNC0zLjI0IDMuMjR6Ij48L3BhdGg+PC9zdmc+');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+}
+
+.gmde_cog_parent {
+	min-width: 0 !important;
+	margin-right: 0 !important;
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+	border: 1px solid transparent !important;
+	box-shadow: none !important;
+	cursor: pointer !important;
+}
+
+.gmde_cog_parent:hover {
+	border: 1px solid #c6c6c6 !important;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1) !important;
+}
+
+.gmde_separator_parent {
+	border-right: 1px solid #cfcfcf !important;
+	border-radius: 0 !important;
+	height: 20px !important;
+	margin-left: 0 !important;
+	min-width: 0 !important;
+	padding-left: 0 !important;
+}
+
+.gmde_lang_menu {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	overflow-y: scroll;
+	z-index: 20;
+	background: #eee;
+	border: 1px solid #aaa;
+}
+
+.gmde_lang_menu .lang {
+	cursor: pointer;
+	color: black;
+}
+
+.gmde_lang_menu .lang:hover {
+	color: red;
+}
+
+.gmde_lang_menu .lang.active {
+	color: red;
+}
+
+.gmde_lang_menu_overlay {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.2);
+}
