@@ -13,6 +13,7 @@
 
 ### misc
 
+- evaluate using https://www.inboxsdk.com/ -- would give Gmail & Inbox support, could simplify caret/text insertion handling & might have compose-view 'destroy' event!
 - translate extension to the other 31 languages supported by the Web Speech API in Chrome
 - release translated versions in Chrome Web Stores
 - improve screenshots / promotional tiles (look at examples on the Chrome Store)
