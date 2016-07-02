@@ -6,6 +6,12 @@ A Google Chrome extension integrating the [Web Speech API](https://dvcs.w3.org/h
 
 ---
 
+Development environment
+
+See [docs/devenv.md](docs/devenv.md) on how to run this extension locally.
+
+---
+
 ####Credits
 
 This Chrome extension would have never been possible without the amazing [Gmail.js](https://github.com/KartikTalwar/gmail.js) library! We also made use of the provided [Extension Boilerplate](https://github.com/KartikTalwar/gmail-chrome-extension-boilerplate) to get rolling.

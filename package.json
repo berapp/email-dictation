@@ -1,0 +1,20 @@
+{
+  "name": "email-dictation",
+  "version": "0.0.1",
+  "description": "A Google Chrome extension integrating the [Web Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) into Gmail. Dictate your emails!",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-open": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregsadetsky/email-dictation.git"
+  },
+  "author": "Greg Sadetsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregsadetsky/email-dictation/issues"
+  },
+  "homepage": "https://github.com/gregsadetsky/email-dictation#readme"
+}

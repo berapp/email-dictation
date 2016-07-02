@@ -10,7 +10,9 @@
     {
       "matches": ["https://mail.google.com/*"],
       "css": ["src/css/app.css"],
-      "js": ["src/js/content.js"]
+      "js": [
+        "src/js/content.js"
+      ]
     }
   ],
   "web_accessible_resources": [

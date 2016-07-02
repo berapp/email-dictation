@@ -1,4 +1,3 @@
-// GMail Dictation Extension
 GMDE = window.GMDE || {};
 GMDE.App = function() {};
 
