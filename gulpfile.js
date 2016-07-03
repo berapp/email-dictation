@@ -2,7 +2,8 @@
 const gulp = require('gulp'),
       exec = require('child_process').exec,
       zip = require('gulp-zip'),
-      bump = require('gulp-bump');
+      bump = require('gulp-bump'),
+      merge = require('merge-stream');
 
 gulp.task('default', ['watch']);
 
@@ -18,15 +19,19 @@ gulp.task('uri', function(){
   });
 });
 
-gulp.task('deploy', function(){
-  gulp.src('./package.json')
+gulp.task('bump', function() {
+  var packageBump = gulp.src('./package.json')
   .pipe(bump({type:'patch'}))
   .pipe(gulp.dest('./'));
 
-  gulp.src('./src/manifest.json')
+  var manifestBump = gulp.src('./src/manifest.json')
   .pipe(bump({type:'patch'}))
   .pipe(gulp.dest('./src'));
 
+  return merge(packageBump, manifestBump);
+});
+
+gulp.task('deploy', ['bump'], function(){
   gulp.src('src/**/**')
   .pipe(zip('archive.zip'))
   .pipe(gulp.dest('dist'));
