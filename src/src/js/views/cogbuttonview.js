@@ -76,10 +76,12 @@ GMDE.CogButtonView = Backbone.View.extend({
 				$(this).siblings().removeClass('active');
 				$(this).addClass('active');
 
+        GMDE.app.setLang(l[1]);
+
 				that.langClickHandler(l[1]);
 			}).appendTo(that.$langMenu);
 
-			if(l[1] === GMDE.Utils.defaultLang) {
+			if(l[1] === GMDE.app.getLang()) {
 				$l.addClass('active');
 			}
 		});

@@ -1,3 +1,5 @@
+**NB This is only useful if you plan on developing the extension. You don't need to follow these instructions if you only want to use the extension in Chrome.**
+
 # Setting up a development environment
 
 Follow the [basic steps](https://developer.chrome.com/extensions/getstarted#unpacked) to add this extension in Developer mode.

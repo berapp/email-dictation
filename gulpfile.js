@@ -12,6 +12,8 @@ gulp.task('watch', function() {
 
 gulp.task('uri', function(){
   exec('chrome-cli open "http://reload.extensions"', function() {
-    exec('chrome-cli close');
+    setTimeout(function() {
+      exec('chrome-cli close');
+    }, 1000);
   });
 });

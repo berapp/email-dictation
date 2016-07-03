@@ -21,7 +21,7 @@ GMDE.ComposeView = Backbone.View.extend({
 		// setup handler
 		this.dictationObj.on('result', this.dictationResultCallback);
 		this.dictationObj.initialize({
-			lang: GMDE.Utils.defaultLang,
+			lang: GMDE.app.getLang(),
 		});
 		// mic button view is responsible for starting/stopping dictation obj
 		// also: mic button view will add itself to the compose window

@@ -7,8 +7,8 @@
 
 ### features
 
+- add hebrew (test right-to-left!)
 - save chosen language in extension configuration
-- add hebrew, greek, ukrainian
 - handle no microphone / no webspeech api, etc. errors gracefully
 - show live mic volume feedback
 - make lang menu compatible with keyboard (to type first letters of the selected language)

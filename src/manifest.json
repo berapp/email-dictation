@@ -8,13 +8,18 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://mail.google.com/*"],
+      "matches": ["*://mail.google.com/*"],
       "css": ["src/css/app.css"],
       "js": [
         "src/js/content.js"
       ]
     }
   ],
+  "background": {
+    "scripts": [
+      "src/js/background.js"
+    ]
+  },
   "web_accessible_resources": [
     "src/lib/jquery-1.12.0.min.js",
     "src/lib/underscore-min.js",
@@ -31,5 +36,11 @@
 
     "src/css/app.css"
   ],
+  "permissions": [
+    "storage"
+  ],
+  "externally_connectable": {
+    "matches": ["*://mail.google.com/*"]
+  },
   "manifest_version": 2
 }

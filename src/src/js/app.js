@@ -1,6 +1,9 @@
 GMDE = window.GMDE || {};
 GMDE.App = function() {};
 
+GMDE.options = JSON.parse(document.currentScript.dataset.options);
+var _runtimeId = JSON.parse(document.currentScript.dataset.runtimeId);
+
 _.extend(GMDE.App.prototype, Backbone.Events, {
 	initialize: function() {
 		this.composeViews = [];
@@ -11,6 +14,14 @@ _.extend(GMDE.App.prototype, Backbone.Events, {
 		this.lastNumberOfComposeWindows = null;
 		setInterval(this.watchComposeWindows.bind(this), 1000);
 	},
+  getLang: function() {
+    var lang = GMDE.options.lang || GMDE.Utils.defaultLang;
+    return lang;
+  },
+  setLang: function(lang) {
+    GMDE.options.lang = lang;
+    chrome.runtime.sendMessage(_runtimeId, {lang: lang});
+  },
 	setupComposeHandler: function() {
 		// deal with new compose window
 		var that = this;

@@ -13,6 +13,8 @@ SCRIPTS = [
   "src/js/boot.js"
 ];
 
+var savedOptions = null;
+
 // load scripts in order defined above --
 // script-load order is otherwise undefined.
 // among others, this impacts backbone, which requires
@@ -28,6 +30,11 @@ function loadOneScript() {
 function loadScript(scriptName, callback) {
   var s = document.createElement("script");
   s.async = false;
+  // pass options to every script as data-options attribute
+  // could/should only pass options to app.js or to
+  // specific options.js file
+  s.dataset.options = JSON.stringify(savedOptions);
+  s.dataset.runtimeId = JSON.stringify(chrome.runtime.id);
   s.src = chrome.extension.getURL(scriptName);
   s.onreadystatechange = s.onload = function() {
     var state = s.readyState;
@@ -38,4 +45,8 @@ function loadScript(scriptName, callback) {
   document.documentElement.appendChild(s);
 }
 
-loadOneScript();
+chrome.storage.sync.get("GMDE_options", function (opts) {
+  savedOptions = opts.GMDE_options;
+  // got extension options, can start loading scripts
+  loadOneScript();
+});
