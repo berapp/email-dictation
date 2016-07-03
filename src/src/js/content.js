@@ -13,7 +13,7 @@ SCRIPTS = [
   "src/js/boot.js"
 ];
 
-var savedOptions = null;
+var savedOptions = {};
 
 // load scripts in order defined above --
 // script-load order is otherwise undefined.
@@ -46,7 +46,7 @@ function loadScript(scriptName, callback) {
 }
 
 chrome.storage.sync.get("GMDE_options", function (opts) {
-  savedOptions = opts.GMDE_options;
+  savedOptions = opts.GMDE_options ||  {};
   // got extension options, can start loading scripts
   loadOneScript();
 });

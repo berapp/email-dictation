@@ -39,6 +39,7 @@ GMDE.Utils = {
             ['Français',        ['fr-FR']],
             ['Galego',          ['gl-ES']],
             ['Greek',           ['el']],
+            ['Hebrew',          ['he']],
             ['Hrvatski',        ['hr_HR']],
             ['IsiZulu',         ['zu-ZA']],
             ['Íslenska',        ['is-IS']],
