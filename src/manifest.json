@@ -1,7 +1,7 @@
 {
   "author": "Greg Sadetsky",
   "name": "Email Dictation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dictate messages in Gmail™. Why type, when you can speak?",
   "icons": {
     "128": "icons/128.png"
