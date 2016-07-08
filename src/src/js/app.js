@@ -9,7 +9,12 @@ _.extend(GMDE.App.prototype, Backbone.Events, {
 		this.composeViews = [];
 
 		this.gmail = new Gmail();
-		this.setupComposeHandler();
+
+    // setup handler for new compose windows
+    this.gmail.observe.on("compose", this.handleNewComposeWindow.bind(this));
+
+    // handle existing compose views
+    this.gmail.dom.composes().map(this.handleNewComposeWindow.bind(this));
 
 		this.lastNumberOfComposeWindows = null;
 		setInterval(this.watchComposeWindows.bind(this), 1000);
@@ -22,17 +27,13 @@ _.extend(GMDE.App.prototype, Backbone.Events, {
     GMDE.options.lang = lang;
     chrome.runtime.sendMessage(_runtimeId, {lang: lang});
   },
-	setupComposeHandler: function() {
-		// deal with new compose window
-		var that = this;
-		this.gmail.observe.on("compose", function(composeObj) {
-			var composeView = new GMDE.ComposeView({
-				composeObj: composeObj,
-				gmail: that.gmail
-			});
-			that.composeViews.push(composeView);
-		});
-	},
+  handleNewComposeWindow: function(composeObj) {
+    var composeView = new GMDE.ComposeView({
+      composeObj: composeObj,
+      gmail: this.gmail
+    });
+    this.composeViews.push(composeView);
+  },
 	watchComposeWindows: function() {
 		var currLen = this.gmail.dom.composes().length;
 

@@ -1,13 +1,11 @@
 ### issues
 
-- attach mic icon to existing compose windows (otherwise extension sometimes does not work)
 - caret positioning is a mess. any way to drastically simplify `dictationResultCallback` && `createNodeAtCaret` in `composeview.js`?
  - block temporary dictation result from being edited / caret being positioned in it?
 - the dictation results are conflicting with the default font set in the Gmail settings. retest with rich-text emails & different default fonts
 
 ### features
 
-- add hebrew (test right-to-left!)
 - handle no microphone / no webspeech api, etc. errors gracefully
 - show live mic volume feedback
 - make lang menu compatible with keyboard (to type first letters of the selected language)
