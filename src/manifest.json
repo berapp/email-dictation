@@ -1,7 +1,7 @@
 {
   "author": "Greg Sadetsky",
   "name": "Email Dictation",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Dictate messages in Gmail™. Why type, when you can speak?",
   "icons": {
     "128": "icons/128.png"
@@ -21,7 +21,7 @@
     ]
   },
   "web_accessible_resources": [
-    "src/lib/jquery-1.12.0.min.js",
+    "src/lib/jquery-2.2.4.min.js",
     "src/lib/underscore-min.js",
     "src/lib/backbone-min.js",
     "src/lib/gmail.min.js",
@@ -37,7 +37,8 @@
     "src/css/app.css"
   ],
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab"
   ],
   "externally_connectable": {
     "matches": ["*://mail.google.com/*"]

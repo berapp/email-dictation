@@ -19,14 +19,14 @@ GMDE.CogButtonView = Backbone.View.extend({
 		// set css rules on the parent to make this button look proper
 		this.$el.parent().addClass('gmde_cog_parent');
 
-		this.$langMenu = $("<div>", {
+		this.$langMenu = Backbone.$("<div>", {
 			'class': 'gmde_lang_menu'
 		}).hide().appendTo('body');
 
-		this.$langMenuOverlay = $("<div>", {
+		this.$langMenuOverlay = Backbone.$("<div>", {
 			'class': 'gmde_lang_menu_overlay'
 		}).hide().appendTo('body').click(function() {
-			$(this).hide();
+			Backbone.$(this).hide();
 			that.$langMenu.hide();
 		});;
 
@@ -69,12 +69,12 @@ GMDE.CogButtonView = Backbone.View.extend({
 		});
 
 		allLangs.forEach(function(l) {
-			var $l = $("<div>", {
+			var $l = Backbone.$("<div>", {
 				html: l[0],
 				'class': 'lang'
 			}).click(function() {
-				$(this).siblings().removeClass('active');
-				$(this).addClass('active');
+				Backbone.$(this).siblings().removeClass('active');
+				Backbone.$(this).addClass('active');
 
         GMDE.app.setLang(l[1]);
 

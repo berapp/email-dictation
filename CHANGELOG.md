@@ -1,3 +1,7 @@
+## 0.0.5 - 2016-07-15
+### Fixed
+- Better (although hackier) resolution of conflict when multiple version of jQuery are loaded. Extension should now load more reliably.
+
 ## 0.0.4 - 2016-07-07
 ### Fixed
 - Attaching mic/cog icons to existing compose windows upon page load

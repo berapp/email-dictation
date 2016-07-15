@@ -51,7 +51,7 @@ GMDE.ComposeView = Backbone.View.extend({
 			that.dictationObj.setLang(lang);
 		});
 
-		this.$separatorButton = $(document.createTextNode(" "));
+		this.$separatorButton = Backbone.$(document.createTextNode(" "));
 		this.gmail.tools.add_compose_button(this.composeObj, this.$separatorButton);
 		this.$separatorButton.parent().addClass('gmde_separator_parent');
 	},
@@ -85,7 +85,7 @@ GMDE.ComposeView = Backbone.View.extend({
 			this.$lastDictationEl = null;
 		}
 
-		var $selectionNode = $(window.getSelection().anchorNode);
+		var $selectionNode = Backbone.$(window.getSelection().anchorNode);
 
 		if(this.$composeBodyEl.is($selectionNode) ||
 			this.$composeBodyEl.has($selectionNode).length > 0) {
@@ -110,11 +110,11 @@ GMDE.ComposeView = Backbone.View.extend({
 			// then, insert new dictationEls right after previous
 			// dictationEls.
 			if(this.$lastDictationEl === null) {
-				var $el = $("<span>").prependTo(this.$composeBodyEl);
+				var $el = Backbone.$("<span>").prependTo(this.$composeBodyEl);
 				this.$lastDictationEl = this.$currDictationEl = $el;
 			}
 			if(this.$currDictationEl === null) {
-				var $el = $("<span>").insertAfter(this.$lastDictationEl);
+				var $el = Backbone.$("<span>").insertAfter(this.$lastDictationEl);
 				this.$currDictationEl = $el;
 			}
 
@@ -128,37 +128,37 @@ GMDE.ComposeView = Backbone.View.extend({
 		}
 	},
 	createNodeAtCaret: function() {
-		var $selectionNode = $(window.getSelection().anchorNode);
+		var $selectionNode = Backbone.$(window.getSelection().anchorNode);
 
 		if(this.$composeBodyEl.is($selectionNode)) {
 			// empty body, create span there.
 			if(this.$composeBodyEl.text().length === 0) {
-				return $("<span>").appendTo(this.$composeBodyEl);
+				return Backbone.$("<span>").appendTo(this.$composeBodyEl);
 			} else {
 				if(this.$lastDictationEl && window.getSelection().anchorOffset > 0) {
 					// caret is in root body element -- new span should go after last dictation span, if it exists
-					return $("<span>").insertAfter(this.$lastDictationEl);
+					return Backbone.$("<span>").insertAfter(this.$lastDictationEl);
 				} else {
 					// user has started replying to an email, prepend new span to the body
-					return $("<span>").prependTo(this.$composeBodyEl);
+					return Backbone.$("<span>").prependTo(this.$composeBodyEl);
 				}
 			}
 		}
 
-		if($(window.getSelection().anchorNode).text().length) {
+		if(Backbone.$(window.getSelection().anchorNode).text().length) {
 			// is selection at the very end of the node?
 			// if this is a text node, are we also inside the last text node of the parent?
-			if($(window.getSelection().anchorNode).text().length === window.getSelection().anchorOffset &&
+			if(Backbone.$(window.getSelection().anchorNode).text().length === window.getSelection().anchorOffset &&
 				(window.getSelection().anchorNode.nodeType !== 3 || (window.getSelection().anchorNode.nodeType === 3 && 
 																	window.getSelection().anchorNode.nextElementSibling === null ))) {
 				if(window.getSelection().anchorNode.nodeType === 3) {
 					// insert after textnode's parent, i.e. the span that contains it
-					return $("<span>").insertAfter(
-						$(window.getSelection().anchorNode).parent());
+					return Backbone.$("<span>").insertAfter(
+						Backbone.$(window.getSelection().anchorNode).parent());
 				} else {
 					// place new node after previous node.
-					return $("<span>").insertAfter(
-						$(window.getSelection().anchorNode));
+					return Backbone.$("<span>").insertAfter(
+						Backbone.$(window.getSelection().anchorNode));
 				}
 			} else {			
 				// break text at caret, creating 2 new text nodes
@@ -167,27 +167,27 @@ GMDE.ComposeView = Backbone.View.extend({
 					window.getSelection().anchorOffset);
 
 				// create spans which will replace text nodes
-				var $n1 = $("<span>", {html: $(n1).text()});
-				var $n2 = $("<span>", {html: $(n2).text()});
+				var $n1 = Backbone.$("<span>", {html: Backbone.$(n1).text()});
+				var $n2 = Backbone.$("<span>", {html: Backbone.$(n2).text()});
 
-				var $parent = $(window.getSelection().anchorNode);
+				var $parent = Backbone.$(window.getSelection().anchorNode);
 
 				$n1.insertAfter($parent);
-				var $newSpan = $("<span>").insertAfter($n1);
+				var $newSpan = Backbone.$("<span>").insertAfter($n1);
 				$n2.insertAfter($newSpan);
 
 				$parent.remove();
 
 				if($parent[0].nodeType === 3) {
-					$(n2).remove();
+					Backbone.$(n2).remove();
 				}
 
 				return $newSpan;
 			}
 		} else {
 			// when caret in empty <span>, get rid of preceeding <br>
-			$(window.getSelection().anchorNode).html('');
-			return $("<span>").insertAfter(
+			Backbone.$(window.getSelection().anchorNode).html('');
+			return Backbone.$("<span>").insertAfter(
 				window.getSelection().anchorNode);
 		}
 	},

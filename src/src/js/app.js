@@ -5,10 +5,10 @@ GMDE.options = JSON.parse(document.currentScript.dataset.options);
 var _runtimeId = JSON.parse(document.currentScript.dataset.runtimeId);
 
 _.extend(GMDE.App.prototype, Backbone.Events, {
-	initialize: function() {
+	initialize: function(opts) {
 		this.composeViews = [];
 
-		this.gmail = new Gmail();
+		this.gmail = new Gmail(opts.jQuery);
 
     // setup handler for new compose windows
     this.gmail.observe.on("compose", this.handleNewComposeWindow.bind(this));
