@@ -15,7 +15,7 @@
 
 ## 0.0.2 - 2016-07-02
 ### Added
-- For developers only: auto-reload the extension on any code change (see [docs/devend.md]).
+- For developers only: auto-reload the extension on any code change (see [docs/devenv.md](docs/devenv.md)).
 - Added languages: Greek, Ukrainian
 - Saving chosen language
 
